@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Task2';
-}
+  // formData:{email:string; passworde:string}[] = [];
+
+  // receiveFormData(formData:{email:string;password:string}){
+    // this.formData.push(formData);
+  }
+// }

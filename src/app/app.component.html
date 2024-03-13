@@ -21,7 +21,9 @@
 </header>
 
 <div class="container">
-      <app-form (formDataEvent)="table.receiveFormData($event)"></app-form>
-    <app-table #table></app-table>
-  <router-outlet></router-outlet>
+      <!-- <app-form (formDataEvent)="table.receiveFormData($event)"></app-form> -->
+    <!-- <app-table #table></app-table> -->
+    <!-- <app-form (formDataEvent)="receiveFormData($event)"></app-form>
+    <app-table [formData]="formData"></app-table> -->
+    <router-outlet></router-outlet>
 </div>

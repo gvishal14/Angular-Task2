@@ -1,16 +1,50 @@
-<table class="table table-hover">
-  <thead>
-    <tr>
-      <th scope="col">Email</th>
-      <th scope="col">Password</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let data of formData">
-      <td>{{formData.email}}</td>
-      <td>{{formData.password}}</td>
-    </tr>
-  </tbody>
-</table>
+<!-- <div *ngIf="submittedData.length>0">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of submittedData">
+        <td>{{data.name}}</td>
+        <td>{{data.email}}</td>
+      </tr>
+    </tbody>
+  </table>
+  </div> -->
 
 
+
+
+<!-- display-component.component.html -->
+<!-- <h2>Submitted Data:</h2>
+<ul>
+  <li *ngFor="let data of submittedData">
+    <p>Name: {{ data.name }}</p>
+    <p>Email: {{ data.email }}</p>
+  </li>
+</ul> -->
+
+
+<div *ngIf="submittedData.length>0">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Edit</th>
+        <th scope="col">Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of submittedData; let i = index">
+        <td>{{data.name}}</td>
+        <td>{{data.email}}</td>
+        <td><button (click)="toggleEdit(i)">Edit</button></td>
+        <td><button (click)="toggleDelete(i)">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
